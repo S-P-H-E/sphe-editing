@@ -44,13 +44,13 @@ export default function Home() {
     <>
       <Head>
         <title>S P H E</title>
-        <meta name="description" content="Sphe.exe editing page" />
+        <meta name="description" content="Sphe Editig Home Page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       {/* Navbar */}
-      <div className='text-[#EBEBEB] w-full border-b-[1px] border-[#3E3E3E] px-10 py-5 flex justify-between items-center'>
+      <div className='text-[#EBEBEB] w-full border-b-[1px] border-[#3E3E3E] px-10 py-6 flex justify-between items-center'>
         <h1 className='text-xl font-bold'>S P H E</h1>
 
         <div className='flex items-center gap-8'>
@@ -120,6 +120,12 @@ export default function Home() {
           option4={'Custom Editing Style'}
           />
         </div>
+      </div>
+
+      {/* Store */}
+      <div className='flex flex-col justify-center items-center text-white pt-12 md:pt-20 border-t-[1px] border-[#3E3E3E]'>
+        <h1 className='text-3xl md:text-4xl font-medium text-center'>Want presets, overlays and templates?</h1>
+        <button className='my-9 md:my-16 py-2 px-4 rounded-lg bg-white text-black font-medium transition-all hover:scale-110' onClick={() => handleMenuLinkClick('/store')}>View My Store</button>
       </div>
 
       {/* Footer */}
