@@ -9,12 +9,15 @@ import {FaTiktok} from 'react-icons/fa'
 import {BiDownArrowAlt} from 'react-icons/bi'
 import {AiFillInstagram} from 'react-icons/ai'
 
-import Hero from '@/public/assets/images/hero.png'
+import Hero from '@/public/assets/images/heroIMG.png'
 import Profile from '@/public/assets/images/profile.png'
 import Image from 'next/image';
 import Plan from '@/components/Plan';
 
 export default function Home() {
+  const editorRef = useRef(null);
+  const plansRef = useRef(null);
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
 
@@ -27,14 +30,10 @@ export default function Home() {
     setIsMenuOpen(false);
   };
 
-  const editorRef = useRef(null);
-
   const scrollToEditor = () => {
     editorRef.current.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
   };
-
-  const plansRef = useRef(null);
 
   const scrollToPlans = () => {
     plansRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -49,6 +48,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       {/* Navbar */}
       <div className='text-[#EBEBEB] w-full border-b-[1px] border-[#3E3E3E] px-10 py-5 flex justify-between items-center'>
         <h1 className='text-xl font-bold'>S P H E</h1>
@@ -81,11 +81,11 @@ export default function Home() {
       <div className='text-[#EBEBEB] flex flex-col justify-center items-center py-10'>
           <FaTiktok className='m-4' size={30}/>
           <p className='text-sm md:text-xl font-medium'>2.6 Million + Views </p>
-          <h1 className='text-4xl md:text-9xl font-medium py-4 text-center'>Get trendy <br/> high-quality edits</h1>
-          <button onClick={scrollToPlans} className='bg-[#0F1115] flex justify-center items-center py-3 px-6 my-20 rounded-lg text-[#C5C5C6] font-medium transition-all scale-110 hover:scale-125'>SCROLL TO LEARN MORE
+          <h1 className='text-5xl md:text-9xl font-medium py-4 text-center'>Get trendy <br/> high-quality edits</h1>
+          <button onClick={scrollToPlans} className='bg-[#0F1115] flex justify-center items-center py-3 px-6 my-6 md:my-20 rounded-lg text-[#C5C5C6] font-medium transition-all scale-110 hover:-translate-y-3'>SCROLL TO LEARN MORE
             <BiDownArrowAlt size={20} className='ml-2 text-[#545557]'/>
           </button>
-          <Image src={Hero} className='w-[400px] md:w-[1000px]'/>
+          <Image src={Hero} className='w-[350px] md:w-[600px]'/>
       </div>
 
       {/* Editor */}
@@ -102,7 +102,7 @@ export default function Home() {
       {/* Plans */}
       <div ref={plansRef} className='text-white flex flex-col justify-center items-center mt-28'>
         <h1 className='text-4xl font-medium my-10'>Plans</h1>
-        <div className='flex flex-col gap-5 md:flex-row'>
+        <div className='flex flex-col gap-1 md:gap-10 md:flex-row'>
           <Plan 
           price={'39'}
           recurrence={'once-off'}
