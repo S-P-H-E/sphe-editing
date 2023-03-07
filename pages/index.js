@@ -123,10 +123,10 @@ export default function Home() {
       </div>
 
       {/* Store */}
-      <div className='flex flex-col justify-center items-center text-white pt-12 md:pt-20 border-t-[1px] border-[#3E3E3E]'>
+      {/* <div className='flex flex-col justify-center items-center text-white pt-12 md:pt-20'>
         <h1 className='text-3xl md:text-4xl font-medium text-center'>Want presets, overlays and templates?</h1>
         <button className='my-9 md:my-16 py-2 px-4 rounded-lg bg-white text-black font-medium transition-all hover:scale-110' onClick={() => handleMenuLinkClick('/store')}>View My Store</button>
-      </div>
+      </div> */}
 
       {/* Footer */}
       <div className='text-[#EBEBEB] w-full border-t-[1px] border-[#3E3E3E] px-10 py-5 flex justify-center items-center'>
