@@ -52,7 +52,6 @@ export default function Home() {
       {/* Navbar */}
       <div className='text-[#EBEBEB] w-full border-b-[1px] border-[#3E3E3E] px-10 py-6 flex justify-between items-center'>
         <h1 className='text-xl font-bold'>S P H E</h1>
-
         <div className='flex items-center gap-8'>
           {/* Mobile Menu */}
           <button className='p-2 hover:bg-[#2c2c2c] rounded md:hidden' onClick={handleMenuToggle}>
@@ -104,20 +103,22 @@ export default function Home() {
         <h1 className='text-4xl font-medium my-10'>Plans</h1>
         <div className='flex flex-col gap-1 md:gap-10 md:flex-row'>
           <Plan 
-          price={'39'}
-          recurrence={'once-off'}
-          option1={'30 Second Edit'}
-          option2={'Pre Selected Sound'}
-          option3={'72 Hour Delivery'}
-          option4={'Pre Selected Editing Style'}
+            before={'limited time only'}
+            price={'9'}
+            recurrence={'once-off'}
+            option1={'30 Second Edit'}
+            option2={'Pre Selected Sound'}
+            option3={'72 Hour Delivery'}
+            option4={'Pre Selected Editing Style'}
           />
           <Plan 
-          price={'99'}
-          recurrence={'once-off'}
-          option1={'Custom Duration'}
-          option2={'Pick Your Sound'}
-          option3={'24 Hour Delivery'}
-          option4={'Custom Editing Style'}
+            before={'50% off'}
+            price={'39'}
+            recurrence={'once-off'}
+            option1={'Custom Duration'}
+            option2={'Pick Your Sound'}
+            option3={'6 Hour Delivery'}
+            option4={'Custom Editing Style'}
           />
         </div>
       </div>
