@@ -86,11 +86,11 @@ export default function Home() {
           </button>
           <Image src={Hero} className='w-[350px] md:w-[600px]'/>
       </div>
-
+      
       {/* Portfolio */}
-      <div className='flex flex-col justify-center items-center text-white'>
+      {/* <div className='flex flex-col justify-center items-center text-white'>
         <h1 className='font-medium text-4xl m-12'>The Edits</h1>
-      </div>
+      </div> */}
 
       {/* Editor */}
       <div ref={editorRef} className='flex flex-col justify-center items-center text-white'>
@@ -135,7 +135,7 @@ export default function Home() {
           Join my discord
         </button>
       </div> */}
-      
+
       {/* Footer */}
       <div className='text-[#EBEBEB] w-full border-t-[1px] border-[#3E3E3E] px-10 py-5 flex justify-center items-center'>
         <h1 className='text-md text-[#3E3E3E]'>© 2023 All rights reserved.</h1>
