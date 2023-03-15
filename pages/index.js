@@ -87,13 +87,18 @@ export default function Home() {
           <Image src={Hero} className='w-[350px] md:w-[600px]'/>
       </div>
 
+      {/* Portfolio */}
+      <div className='flex flex-col justify-center items-center text-white'>
+        <h1 className='font-medium text-4xl m-12'>The Edits</h1>
+      </div>
+
       {/* Editor */}
       <div ref={editorRef} className='flex flex-col justify-center items-center text-white'>
         <h1 className='font-medium text-4xl m-12'>Meet the editor</h1>
         <Image src={Profile} className='w-[150px]'/>
         <h2 className='text-2xl m-5 text-[#757575] font-medium'>Sphe</h2>
         <div className='m-2 flex gap-5'>
-          <FaTiktok onClick={() => {event.preventDefault();window.open('https://www.tiktok.com/@empire_cord', "_blank");}} size={50} className='border rounded-lg p-3 transition-all hover:scale-100 md:hover:scale-110'/>
+          <FaTiktok onClick={() => {event.preventDefault();window.open('https://www.tiktok.com/@sphe.exe', "_blank");}} size={50} className='border rounded-lg p-3 transition-all hover:scale-100 md:hover:scale-110'/>
           <AiFillInstagram onClick={() => {event.preventDefault();window.open('https://www.instagram.com/sphe.exe', "_blank");}} size={50} className='border rounded-lg p-3 transition-all hover:scale-100 md:hover:scale-110'/>
         </div>
       </div>
@@ -103,8 +108,8 @@ export default function Home() {
         <h1 className='text-4xl font-medium my-10'>Plans</h1>
         <div className='flex flex-col gap-1 md:gap-10 md:flex-row'>
           <Plan 
-            before={'limited time only'}
-            price={'9'}
+            before={''}
+            price={'29'}
             recurrence={'once-off'}
             option1={'30 Second Edit'}
             option2={'Pre Selected Sound'}
@@ -112,8 +117,8 @@ export default function Home() {
             option4={'Pre Selected Editing Style'}
           />
           <Plan 
-            before={'50% off'}
-            price={'39'}
+            before={''}
+            price={'199'}
             recurrence={'once-off'}
             option1={'Custom Duration'}
             option2={'Pick Your Sound'}
@@ -124,10 +129,12 @@ export default function Home() {
       </div>
 
       {/* Store */}
-      {/* <div className='flex flex-col justify-center items-center text-white pt-12 md:pt-20'>
-        <h1 className='text-3xl md:text-4xl font-medium text-center'>Want presets, overlays and templates?</h1>
-        <button className='my-9 md:my-16 py-2 px-4 rounded-lg bg-white text-black font-medium transition-all hover:scale-110' onClick={() => handleMenuLinkClick('/store')}>View My Store</button>
-      </div> */}
+      <div className='flex flex-col justify-center items-center text-white pt-12 md:pt-20 border-t border-[#3E3E3E]'>
+        <h1 className='text-3xl m-2 md:text-4xl font-medium text-center'>Join my community, get FREE editing resources.</h1>
+        <button className='my-9 md:my-12 py-2 px-4 rounded-lg bg-white text-black font-medium' onClick={() => {event.preventDefault();window.open('https://discord.gg/PBpeEV8cmC', "_blank");}}>
+          Join my discord
+        </button>
+      </div>
 
       {/* Footer */}
       <div className='text-[#EBEBEB] w-full border-t-[1px] border-[#3E3E3E] px-10 py-5 flex justify-center items-center'>

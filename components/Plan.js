@@ -1,4 +1,5 @@
 import {BsFillCheckCircleFill} from 'react-icons/bs'
+import {FaPaypal} from 'react-icons/fa'
 
 export default function Plan({before, price, recurrence, option1, option2, option3, option4}) {
   const email = 'sphe.g.personal@gmail.com';
@@ -30,8 +31,9 @@ export default function Plan({before, price, recurrence, option1, option2, optio
             <h1 className='text-[#8E8E90] font-medium'>{option4}</h1>
           </div>
           
-          <div className='w-full'>
-            <h1 onClick={emailBTN} className='bg-white rounded-lg text-black font-medium flex justify-center items-center py-2 mt-6'>Get in contact</h1>
+          <div className='w-full flex'>
+            <h1 onClick={emailBTN} className='bg-white rounded-lg text-black font-medium flex justify-center items-center py-2 mt-6 mx-1 w-full'>Purchase<mark className='mx-1 bg-transparent text-[#5C5C5D] font-light'>${price}</mark></h1>
+            {/* <FaPaypal size={40} className='bg-white rounded-lg text-black font-medium flex justify-center items-center py-2 mt-6 mx-1 w-20'/> */}
           </div>
         </div>
     )
