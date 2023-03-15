@@ -128,14 +128,14 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Store */}
-      <div className='flex flex-col justify-center items-center text-white pt-12 md:pt-20 border-t border-[#3E3E3E]'>
+      {/* Discord */}
+      {/* <div className='flex flex-col justify-center items-center text-white pt-12 md:pt-20 border-t border-[#3E3E3E]'>
         <h1 className='text-3xl m-2 md:text-4xl font-medium text-center'>Join my community, get FREE editing resources.</h1>
         <button className='my-9 md:my-12 py-2 px-4 rounded-lg bg-white text-black font-medium' onClick={() => {event.preventDefault();window.open('https://discord.gg/PBpeEV8cmC', "_blank");}}>
           Join my discord
         </button>
-      </div>
-
+      </div> */}
+      
       {/* Footer */}
       <div className='text-[#EBEBEB] w-full border-t-[1px] border-[#3E3E3E] px-10 py-5 flex justify-center items-center'>
         <h1 className='text-md text-[#3E3E3E]'>© 2023 All rights reserved.</h1>
