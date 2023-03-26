@@ -90,7 +90,7 @@ export default function Home() {
       {/* Hero */}
       <div className='text-[#EBEBEB] flex flex-col justify-center items-center py-10'>
           {/* <FaTiktok className='m-4' size={30}/> */}
-          <p className='text-sm md:text-xl font-medium uppercase border border-white px-3 rounded-full'>50% off your first purchase</p>
+          <p className='text-sm md:text-xl font-medium uppercase border border-white px-3 rounded-full'>10% off your first purchase</p>
           <h1 className='text-5xl md:text-9xl font-medium py-7 md:py-9 text-center'>Get trendy <br/> high-quality edits</h1>
           <button onClick={scrollToResults} className='bg-[#0F1115] flex justify-center items-center py-3 px-6 my-6 md:my-20 rounded-lg text-[#C5C5C6] font-medium transition-all scale-110 hover:-translate-y-3 uppercase'>Scroll to learn more
             <BiDownArrowAlt size={20} className='ml-2 text-[#545557]'/>
