@@ -2,12 +2,12 @@ import Hero from '@/public/assets/images/heroIMG.png'
 import Image from 'next/image';
 
 export default function Showreel() {
-    const videoUrl = "https://www.youtube.com/embed/_bFI4HEmgw4?autoplay=1&controls=0&iv_load_policy=3&disablekb=1";
+    const videoUrl = "https://www.youtube.com/embed/_bFI4HEmgw4";
 
     return (
         <div className="rounded-xl scale-90 md:bg-[#0F1115] border md:border-[#3F4044] md:p-[24px]">
             <iframe
-                className="rounded-xl w-full sm:w-[480px] h-[200px] sm:h-[270px] md:w-[853px] md:h-[480px]"
+                className="rounded-xl w-[370px] sm:w-[480px] h-[220px] sm:h-[270px] md:w-[853px] md:h-[480px]"
                 src={videoUrl}
                 width="100%"
                 height="100%"
