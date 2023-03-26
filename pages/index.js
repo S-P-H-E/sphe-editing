@@ -12,7 +12,7 @@ import {IoIosClose} from 'react-icons/io'
 import Hero from '@/public/assets/images/heroIMG.png'
 import Profile from '@/public/assets/images/profile.png'
 import Image from 'next/image';
-import Plan from '@/components/Plan';
+import Plan from '@/components/Plans';
 import Showreel from '@/components/Showreel';
 
 export default function Home() {
@@ -95,8 +95,8 @@ export default function Home() {
           <button onClick={scrollToResults} className='bg-[#0F1115] flex justify-center items-center py-3 px-6 my-6 md:my-20 rounded-lg text-[#C5C5C6] font-medium transition-all scale-110 hover:-translate-y-3 uppercase'>Scroll to learn more
             <BiDownArrowAlt size={20} className='ml-2 text-[#545557]'/>
           </button>
-          <Image src={Hero} className='w-[350px] md:w-[600px]'/>
-          {/* <Showreel /> */}
+          {/* <Image src={Hero} className='w-[350px] md:w-[600px]'/> */}
+          <Showreel />
       </div>
       
       {/* Portfolio */}

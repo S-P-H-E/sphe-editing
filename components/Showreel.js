@@ -1,8 +1,5 @@
-import Hero from '@/public/assets/images/heroIMG.png'
-import Image from 'next/image';
-
 export default function Showreel() {
-    const videoUrl = "https://www.youtube.com/embed/_bFI4HEmgw4";
+    const videoUrl = "https://www.youtube.com/embed/UuYSy2l8Ozk";
 
     return (
         <div className="rounded-xl scale-90 md:bg-[#0F1115] border md:border-[#3F4044] md:p-[24px]">
@@ -17,8 +14,8 @@ export default function Showreel() {
             ></iframe>
             <div className="flex justify-between items-center md:mt-5">
                 <div>
-                    <h1 className='font-medium text-[0px] md:text-4xl'>Showreel</h1> 
-                    <p className="text-[#727375] text-[0px] md:text-[1rem]">View my latest work</p>
+                    <h1 className='font-medium text-[0px] md:text-4xl'>SHOWREEL - 2023</h1>
+                    <p className="text-[#727375] text-[0px] md:text-[1rem]">@sphe.exe</p>
                 </div>
                 <button className="bg-white px-4 py-2 hidden md:flex text-xl rounded-lg text-black" onClick={() => {event.preventDefault();window.open('https://www.tiktok.com/@sphe.exe', "_blank");}}>Follow</button>
             </div>
