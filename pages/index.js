@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useRef } from 'react';
@@ -8,6 +7,7 @@ import { HiMenu } from 'react-icons/hi';
 import {FaTiktok} from 'react-icons/fa'
 import {BiDownArrowAlt} from 'react-icons/bi'
 import {AiFillInstagram} from 'react-icons/ai'
+import {IoIosClose} from 'react-icons/io'
 
 import Hero from '@/public/assets/images/heroIMG.png'
 import Profile from '@/public/assets/images/profile.png'
@@ -16,6 +16,7 @@ import Plan from '@/components/Plan';
 
 export default function Home() {
   const editorRef = useRef(null);
+  const resultsRef = useRef(null);
   const plansRef = useRef(null);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,6 +33,11 @@ export default function Home() {
 
   const scrollToEditor = () => {
     editorRef.current.scrollIntoView({ behavior: 'smooth' });
+    setIsMenuOpen(false);
+  };
+
+  const scrollToResults = () => {
+    resultsRef.current.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
   };
 
@@ -62,26 +68,30 @@ export default function Home() {
           <div className='hidden md:flex gap-8'>
             <button className='hover:underline'>Home</button>
             <button className='hover:underline' onClick={scrollToEditor}>Editor</button>
+            <button className='hover:underline' onClick={scrollToResults}>Results</button>
             <button className='hover:underline' onClick={scrollToPlans}>Plans</button>
           </div>
         </div>
 
         {/* Mobile Menu Overlay */}
-        <div className={`text-black fixed top-0 left-0 right-0 bottom-0 z-10 bg-white transition-all duration-300 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
-          <div className='p-4 flex flex-col gap-3 justify-center h-screen'>
-            <button className='block w-full py-2 text-center hover:bg-gray-200' onClick={() => handleMenuLinkClick('/')}>Home</button>
-            <button className='block w-full py-2 text-center hover:bg-gray-200' onClick={scrollToEditor}>Editor</button>
-            <button className='block w-full py-2 text-center hover:bg-gray-200' onClick={scrollToPlans}>Plans</button>
+        <div className={`text-white fixed top-0 left-0 right-0 bottom-0 z-10 bg-black transition-all duration-300 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
+          <div className='p-4 flex flex-col h-screen justify-center'>
+            <div className='flex flex-col gap-3'>
+              <button className='block w-full py-2 text-center border rounded-full' onClick={() => handleMenuLinkClick('/')}>Home</button>
+              <button className='block w-full py-2 text-center border rounded-full' onClick={scrollToEditor}>Editor</button>
+              <button className='block w-full py-2 text-center border rounded-full' onClick={scrollToResults}>Results</button>
+              <button className='block w-full py-2 text-center border rounded-full' onClick={scrollToPlans}>Plans</button>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Hero */}
       <div className='text-[#EBEBEB] flex flex-col justify-center items-center py-10'>
-          <FaTiktok className='m-4' size={30}/>
-          <p className='text-sm md:text-xl font-medium'>2.6 Million + Views </p>
+          {/* <FaTiktok className='m-4' size={30}/> */}
+          <p className='text-sm md:text-xl font-medium uppercase border border-white px-3 rounded-full'>50% off your first purchase</p>
           <h1 className='text-5xl md:text-9xl font-medium py-4 text-center'>Get trendy <br/> high-quality edits</h1>
-          <button onClick={scrollToPlans} className='bg-[#0F1115] flex justify-center items-center py-3 px-6 my-6 md:my-20 rounded-lg text-[#C5C5C6] font-medium transition-all scale-110 hover:-translate-y-3'>SCROLL TO LEARN MORE
+          <button onClick={scrollToResults} className='bg-[#0F1115] flex justify-center items-center py-3 px-6 my-6 md:my-20 rounded-lg text-[#C5C5C6] font-medium transition-all scale-110 hover:-translate-y-3 uppercase'>Scroll to learn more
             <BiDownArrowAlt size={20} className='ml-2 text-[#545557]'/>
           </button>
           <Image src={Hero} className='w-[350px] md:w-[600px]'/>
@@ -100,6 +110,25 @@ export default function Home() {
         <div className='m-2 flex gap-5'>
           <FaTiktok onClick={() => {event.preventDefault();window.open('https://www.tiktok.com/@sphe.exe', "_blank");}} size={50} className='border rounded-lg p-3 transition-all hover:scale-100 md:hover:scale-110'/>
           <AiFillInstagram onClick={() => {event.preventDefault();window.open('https://www.instagram.com/sphe.exe', "_blank");}} size={50} className='border rounded-lg p-3 transition-all hover:scale-100 md:hover:scale-110'/>
+        </div>
+      </div>
+
+      {/* Results */}
+      <div ref={resultsRef} className='flex flex-col justify-center items-center text-white mt-28'>
+        <h1 className='font-medium text-4xl m-12'>Results</h1>
+        <div className='flex flex-col gap-7 md:gap-0 md:flex-row justify-between w-full max-w-[250px] md:max-w-[600px]'>
+          <div className='flex flex-col justify-center items-center'>
+            <h1 className='text-[3rem] text-[#EB603F]'>3M +</h1>
+            <p className='border px-3 rounded-full'>Views Generated</p>
+          </div>
+          <div className='flex flex-col justify-center items-center'>
+            <h1 className='text-[3rem] text-[#EB603F]'>500k +</h1>
+            <p className='border px-3 rounded-full'>Total Video Likes</p>
+          </div>
+          <div className='flex flex-col justify-center items-center'>
+            <h1 className='text-[3rem] text-[#EB603F]'>19k+</h1>
+            <p className='border px-3 rounded-full'>Fanbase</p>
+          </div>
         </div>
       </div>
 

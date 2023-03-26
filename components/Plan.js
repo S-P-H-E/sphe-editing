@@ -30,7 +30,7 @@ export default function Plan({before, price, recurrence, option1, option2, optio
             <BsFillCheckCircleFill />
             <h1 className='text-[#8E8E90] font-medium'>{option4}</h1>
           </div>
-          
+
           <div className='w-full flex'>
             <h1 onClick={emailBTN} className='bg-white rounded-lg text-black font-medium flex justify-center items-center py-2 mt-6 mx-1 w-full cursor-pointer'>Purchase<mark className='mx-1 bg-transparent text-[#5C5C5D] font-light'>${price}</mark></h1>
             {/* <FaPaypal size={40} className='bg-white rounded-lg text-black font-medium flex justify-center items-center py-2 mt-6 mx-1 w-20'/> */}
