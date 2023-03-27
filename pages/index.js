@@ -90,7 +90,13 @@ export default function Home() {
       {/* Hero */}
       <div className='text-[#EBEBEB] flex flex-col justify-center items-center py-10'>
           {/* <FaTiktok className='m-4' size={30}/> */}
-          <p className='text-sm md:text-xl font-medium uppercase border border-white px-3 rounded-full'>10% off your first purchase</p>
+          <div className='text-sm md:text-xl font-medium uppercase bg-gradient-to-r from-[#ECEDEC] to-[#8F9090] rounded-full'>
+            <div className='bg-[#050505] px-3 m-[0.10rem] rounded-full'>
+              <p className='text-transparent bg-clip-text bg-gradient-to-r from-[#ECEDEC] to-[#8F9090]'>
+                10% off your first purchase
+              </p>
+            </div>
+          </div>
           <h1 className='text-5xl md:text-9xl font-medium py-7 md:py-9 text-center'>Get trendy <br/> high-quality edits</h1>
           <button onClick={scrollToResults} className='bg-[#0F1115] flex justify-center items-center py-3 px-6 my-6 md:my-20 rounded-lg text-[#C5C5C6] font-medium transition-all scale-110 hover:-translate-y-3 uppercase'>Scroll to learn more
             <BiDownArrowAlt size={20} className='ml-2 text-[#545557]'/>
@@ -108,10 +114,19 @@ export default function Home() {
       <div ref={editorRef} className='flex flex-col justify-center items-center text-white'>
         <h1 className='font-medium text-4xl m-12'>Meet the editor</h1>
         <Image src={Profile} className='w-[150px]'/>
-        <h2 className='text-2xl m-5 text-[#757575] font-medium'>Sphe</h2>
+        <div className='text-sm md:text-xl font-medium uppercase -gradient-to-r from-[#ECEDEC] to-[#8F9090] rounded-full mt-5'>
+          <div className='bg-[#050505] px-3 m-[0.10rem] rounded-full'>
+            <p className='text-transparent text-2xl bg-clip-text bg-gradient-to-r from-[#ECEDEC] to-[#8F9090]'>
+              Sphe
+            </p>
+          </div>
+        </div>
+        <p className='max-w-[250px] text-center m-4 p-2 border rounded-lg'>
+          I have 2 years of editing experience, the editing softwares I use are <mark className='bg-transparent text-white underline'>After Effects</mark> and <mark className='bg-transparent text-white underline'>Premier Pro</mark>.
+        </p>
         <div className='m-2 flex gap-5'>
-          <FaTiktok onClick={() => {event.preventDefault();window.open('https://www.tiktok.com/@sphe.exe', "_blank");}} size={50} className='border rounded-lg p-3 transition-all hover:scale-100 md:hover:scale-110'/>
-          <AiFillInstagram onClick={() => {event.preventDefault();window.open('https://www.instagram.com/sphe.exe', "_blank");}} size={50} className='border rounded-lg p-3 transition-all hover:scale-100 md:hover:scale-110'/>
+          <FaTiktok onClick={() => {event.preventDefault();window.open('https://www.tiktok.com/@sphe.exe', "_blank");}} size={50} className='border text-white rounded-lg p-3 transition-all hover:scale-100 md:hover:scale-110'/>
+          <AiFillInstagram onClick={() => {event.preventDefault();window.open('https://www.instagram.com/sphe.exe', "_blank");}} size={50} className='border text-white rounded-lg p-3 transition-all hover:scale-100 md:hover:scale-110'/>
         </div>
       </div>
 
