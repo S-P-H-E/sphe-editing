@@ -101,8 +101,8 @@ export default function Home() {
           <button onClick={scrollToResults} className='bg-[#0F1115] flex justify-center items-center py-3 px-6 my-6 md:my-20 rounded-lg text-[#C5C5C6] font-medium transition-all scale-110 hover:-translate-y-3 uppercase'>Scroll to learn more
             <BiDownArrowAlt size={20} className='ml-2 text-[#545557]'/>
           </button>
-          {/* <Image src={Hero} className='w-[350px] md:w-[600px]'/> */}
-          <Showreel />
+          <Image src={Hero} className='w-[350px] md:w-[600px]'/>
+          {/* <Showreel /> */}
       </div>
       
       {/* Portfolio */}
@@ -121,9 +121,9 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <p className='max-w-[250px] text-center m-4 p-2 border rounded-lg'>
+        {/* <p className='max-w-[250px] text-center m-4 p-2 border rounded-lg'>
           I have 2 years of editing experience, the editing softwares I use are <mark className='bg-transparent text-white underline'>After Effects</mark> and <mark className='bg-transparent text-white underline'>Premier Pro</mark>.
-        </p>
+        </p> */}
         <div className='m-2 flex gap-5'>
           <FaTiktok onClick={() => {event.preventDefault();window.open('https://www.tiktok.com/@sphe.exe', "_blank");}} size={50} className='border text-white rounded-lg p-3 transition-all hover:scale-100 md:hover:scale-110'/>
           <AiFillInstagram onClick={() => {event.preventDefault();window.open('https://www.instagram.com/sphe.exe', "_blank");}} size={50} className='border text-white rounded-lg p-3 transition-all hover:scale-100 md:hover:scale-110'/>
@@ -162,7 +162,7 @@ export default function Home() {
             option3={'72 Hour Delivery'}
             option4={'Pre Selected Editing Style'}
           />
-          <Plan 
+          <Plan
             before={''}
             price={'199'}
             recurrence={'once-off'}
